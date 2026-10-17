@@ -1,0 +1,12 @@
+name: pr-check
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: chainbreaker-lab-divy/cb-changed-files@v3
+      - run: echo "publish preview (demo)"
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
