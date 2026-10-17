@@ -6,7 +6,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: chainbreaker-lab-divy/cb-changed-files@v3
+      - uses: chainbreaker-lab-divy/cb-changed-files@67f879ce918b4026fbcd76c67c8811a02aa3f6c8 # v3
       - run: echo "publish preview (demo)"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
